@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="db87ec1aa0a44c4398a0613118b064f1" Name="Diagram1">
+        <EntityTypeShape EntityType="FDB5331Model.Activity" Width="1.5" PointX="8.25" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FDB5331Model.Advisor" Width="1.5" PointX="3" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FDB5331Model.Department" Width="1.5" PointX="5.25" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FDB5331Model.Faculty" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="FDB5331Model.Grade" Width="1.5" PointX="7.5" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FDB5331Model.Maj_Adv" Width="1.5" PointX="5.25" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FDB5331Model.Major" Width="1.5" PointX="3" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FDB5331Model.School" Width="1.5" PointX="0.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FDB5331Model.Std_Act" Width="1.5" PointX="10.5" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FDB5331Model.Student" Width="1.5" PointX="5.25" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FDB5331Model.sysdiagram" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="FDB5331Model.Std_Act_act_code_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="FDB5331Model.Advisor_sch_code_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="FDB5331Model.Maj_Adv_adv_code_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="FDB5331Model.Department_fac_code_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="FDB5331Model.Faculty_sch_code_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="FDB5331Model.Grade_std_code_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="FDB5331Model.Maj_Adv_maj_code_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="FDB5331Model.Major_sch_code_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="FDB5331Model.Student_maj_code_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="FDB5331Model.Std_Act_std_code_fk" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

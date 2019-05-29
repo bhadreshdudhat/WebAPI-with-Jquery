@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8F494163-E53B-460B-A736-12CB78A96471}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BLL</RootNamespace>
+    <AssemblyName>BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Domain\Activity.cs">
+      <DependentUpon>FDB5331Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\Advisor.cs">
+      <DependentUpon>FDB5331Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\Department.cs">
+      <DependentUpon>FDB5331Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\Faculty.cs">
+      <DependentUpon>FDB5331Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\FDB5331Entities.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FDB5331Entities.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\FDB5331Entities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FDB5331Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\FDB5331Entities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FDB5331Entities.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\Grade.cs">
+      <DependentUpon>FDB5331Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\Major.cs">
+      <DependentUpon>FDB5331Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\Maj_Adv.cs">
+      <DependentUpon>FDB5331Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\School.cs">
+      <DependentUpon>FDB5331Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\Std_Act.cs">
+      <DependentUpon>FDB5331Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\Student.cs">
+      <DependentUpon>FDB5331Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\sysdiagram.cs">
+      <DependentUpon>FDB5331Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IUnitOfWork.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ISchoolRepository.cs" />
+    <Compile Include="Repositories\IStudentRepository.cs" />
+    <Compile Include="Repositories\IRepository.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EntityDeploy Include="Domain\FDB5331Entities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>FDB5331Entities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="Domain\FDB5331Entities.edmx.diagram">
+      <DependentUpon>FDB5331Entities.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Domain\FDB5331Entities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>FDB5331Entities.Context.cs</LastGenOutput>
+      <DependentUpon>FDB5331Entities.edmx</DependentUpon>
+    </Content>
+    <Content Include="Domain\FDB5331Entities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FDB5331Entities.edmx</DependentUpon>
+      <LastGenOutput>FDB5331Entities.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
